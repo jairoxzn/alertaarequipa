@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Alerta del Sur S.A.C.</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            alerta: '#FF5733',
+          }
+        }
+      }
+    };
+  </script>
+</head>
+<body class="font-sans bg-white text-gray-900 scroll-smooth">
+
+  <!-- Navbar -->
+  <nav class="bg-alerta text-white p-4 fixed w-full z-10 shadow-lg">
+    <div class="max-w-7xl mx-auto flex justify-between items-center">
+      <a href="#" class="text-2xl font-bold">Alerta del Sur</a>
+      <ul class="flex space-x-6">
+        <li><a href="#quienes-somos" class="hover:underline">Nosotros</a></li>
+        <li><a href="#servicios" class="hover:underline">Servicios</a></li>
+        <li><a href="#testimonios" class="hover:underline">Testimonios</a></li>
+        <li><a href="#faq" class="hover:underline">FAQ</a></li>
+        <li><a href="#contacto" class="hover:underline">Contacto</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header class="relative h-screen bg-cover bg-center" style="background-image: url('https://alertarequipa.com/wp-content/uploads/2023/11/banner-alerta.jpg');">
+    <div class="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center">
+      <div class="text-white text-center px-4">
+        <h1 class="text-5xl font-bold mb-4">Emergencias Médicas en Arequipa</h1>
+        <p class="text-lg">Atención profesional 24/7 con unidades móviles</p>
+      </div>
+    </div>
+  </header>
+
+  <!-- Nosotros -->
+  <section id="quienes-somos" class="py-20 px-6 bg-gray-100 text-center">
+    <h2 class="text-3xl font-bold text-alerta">¿Quiénes Somos?</h2>
+    <p class="max-w-3xl mx-auto mt-6 text-lg">
+      Somos una empresa líder en atención médica prehospitalaria. Desde 1999, brindamos atención rápida, segura y profesional en Arequipa.
+    </p>
+  </section>
+
+  <!-- Servicios -->
+  <section id="servicios" class="py-20 px-6">
+    <div class="max-w-7xl mx-auto text-center">
+      <h2 class="text-3xl font-bold text-alerta">Nuestros Servicios</h2>
+      <div class="grid md:grid-cols-3 gap-8 mt-12">
+        <div class="p-6 bg-white rounded-lg shadow hover:scale-105 transition">
+          <img src="https://alertarequipa.com/wp-content/uploads/2023/11/servicio-ambulancia.jpg" alt="Ambulancia" class="rounded-md mb-4">
+          <h3 class="text-xl font-semibold">Ambulancia</h3>
+          <p>Traslados y atención en el lugar del incidente.</p>
+        </div>
+        <div class="p-6 bg-white rounded-lg shadow hover:scale-105 transition">
+          <img src="https://alertarequipa.com/wp-content/uploads/2023/11/medico-domicilio.jpg" alt="Domicilio" class="rounded-md mb-4">
+          <h3 class="text-xl font-semibold">Atención a Domicilio</h3>
+          <p>Médicos capacitados disponibles para atención en casa.</p>
+        </div>
+        <div class="p-6 bg-white rounded-lg shadow hover:scale-105 transition">
+          <img src="https://alertarequipa.com/wp-content/uploads/2023/11/telefono-medico.jpg" alt="Consulta" class="rounded-md mb-4">
+          <h3 class="text-xl font-semibold">Consulta Telefónica</h3>
+          <p>Asesoría médica inmediata por llamada o WhatsApp.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonios -->
+  <section id="testimonios" class="bg-gray-100 py-20 px-6">
+    <h2 class="text-3xl text-center font-bold text-alerta">Lo que dicen nuestros pacientes</h2>
+    <div class="max-w-4xl mx-auto mt-10 grid md:grid-cols-2 gap-6">
+      <div class="bg-white p-6 rounded shadow">
+        <p class="italic">"Llegaron en menos de 10 minutos. ¡Excelente atención del personal!"</p>
+        <p class="mt-4 font-semibold text-right">– Mariana R.</p>
+      </div>
+      <div class="bg-white p-6 rounded shadow">
+        <p class="italic">"Gracias a su pronta respuesta, mi padre fue trasladado a tiempo."</p>
+        <p class="mt-4 font-semibold text-right">– José M.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="py-20 px-6 text-center">
+    <h2 class="text-3xl font-bold text-alerta mb-8">Preguntas Frecuentes</h2>
+    <div class="max-w-4xl mx-auto text-left space-y-6">
+      <details class="bg-gray-100 p-4 rounded">
+        <summary class="font-semibold cursor-pointer">¿Atienden emergencias las 24 horas?</summary>
+        <p class="mt-2">Sí, nuestro servicio está disponible todos los días del año, las 24 horas.</p>
+      </details>
+      <details class="bg-gray-100 p-4 rounded">
+        <summary class="font-semibold cursor-pointer">¿Puedo pagar con tarjeta?</summary>
+        <p class="mt-2">Sí, aceptamos pagos con tarjeta de crédito y débito.</p>
+      </details>
+    </div>
+  </section>
+
+  <!-- Contacto -->
+  <section id="contacto" class="bg-gray-100 py-20 px-6 text-center">
+    <h2 class="text-3xl font-bold text-alerta mb-6">Contáctanos</h2>
+    <form class="max-w-xl mx-auto bg-white p-6 rounded-lg shadow space-y-4" onsubmit="enviarFormulario(event)">
+      <input type="text" placeholder="Nombre" required class="w-full border p-2 rounded">
+      <input type="email" placeholder="Correo electrónico" required class="w-full border p-2 rounded">
+      <textarea placeholder="Mensaje" required class="w-full border p-2 rounded"></textarea>
+      <button type="submit" class="bg-alerta text-white px-6 py-2 rounded hover:bg-red-600 transition">Enviar</button>
+    </form>
+    <p id="form-msg" class="mt-4 text-green-600 font-semibold hidden">✅ ¡Mensaje enviado!</p>
+  </section>
+
+  <!-- WhatsApp Button -->
+  <a href="https://wa.me/51999999999" target="_blank" class="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition">
+    💬
+  </a>
+
+  <!-- Footer -->
+  <footer class="bg-alerta text-white text-center py-4">
+    <p>&copy; 2025 Alerta del Sur S.A.C. - Todos los derechos reservados</p>
+  </footer>
+
+  <!-- JS para formulario -->
+  <script>
+    function enviarFormulario(e) {
+      e.preventDefault();
+      document.getElementById("form-msg").classList.remove("hidden");
+    }
+  </script>
+
+</body>
+</html>
